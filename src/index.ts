@@ -55,7 +55,15 @@ const sketch = (p5: P5) => {
       })
     })
     }
-  document.addEventListener('click', p5.setup)
+  document.addEventListener('click', () => {
+    p5.setup()
+    document.querySelector('#info')?.remove()
+  })
 }
 
 new P5(sketch)
+
+window.onload = () => {
+  const isMobile = window.innerWidth < 1000;
+  isMobile && document.querySelectorAll('span').forEach((span) => span.innerHTML = 'tap')
+}

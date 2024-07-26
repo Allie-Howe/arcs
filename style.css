@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.guiContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 0%, 0.1);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.guiText {
+  color: white;
+  text-align: center;
+
+  max-width: 12em;
+  color: rgba(0, 0, 0, 0);
+  animation: fadeIn .25s linear .25s forwards;
+  padding: 10px;
+}
+
+p {
+  font-size: .7em;
+}
+
+h6 {
+  font-size: 2em;
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    background-color: hsl(0, 0%, 0%, 0);
+    color: rgba(255, 255, 255, 0);
+  }
+
+  100% {
+    background-color: rgb(0, 0, 0, .6);
+    color: rgba(255, 255, 255, .9);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  h6 {
+    font-size: 3em;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+}
