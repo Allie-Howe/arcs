@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@types/lodash':
+        specifier: 4.17.7
+        version: 4.17.7
+      lodash:
+        specifier: 4.17.21
+        version: 4.17.21
       p5:
         specifier: 1.5.0
         version: 1.5.0
@@ -506,6 +512,9 @@ packages:
   '@trysound/sax@0.2.0':
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
+
+  '@types/lodash@4.17.7':
+    resolution: {integrity: sha512-8wTvZawATi/lsmNu10/j2hk1KEP0IvjubqPE3cu1Xz7xfXXt5oCq3SNUz4fMIP4XGF9Ky+Ue2tBA3hcS7LSBlA==}
 
   '@types/p5@1.5.0':
     resolution: {integrity: sha512-EhaRGjqGcv5lKWvBUfC4Oxi2J5T1C1HuoQnJCdxJJMrRf+HTVdh7hCgBo88nHe6LbUXxkrxVj9tc1zOuemefFA==}
@@ -2137,6 +2146,8 @@ snapshots:
 
   '@trysound/sax@0.2.0': {}
 
+  '@types/lodash@4.17.7': {}
+
   '@types/p5@1.5.0': {}
 
   abab@2.0.6:
@@ -2695,8 +2706,7 @@ snapshots:
   lodash.sortby@4.7.0:
     optional: true
 
-  lodash@4.17.21:
-    optional: true
+  lodash@4.17.21: {}
 
   mdn-data@2.0.14: {}
 
