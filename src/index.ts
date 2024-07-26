@@ -3,11 +3,18 @@ import P5 from 'p5'
 
 const COUNT = 8
 
-const bgCols = ['#FFEEAA']
-const fgCols = ['#FFA500']
+const colPairs = [
+  {bg: '#FEA', fg: '#FA0'},
+  {bg: '#FAA', fg: '#F55'},
+  {bg: '#FAF', fg: '#F5D'},
+  {bg: '#AFF', fg: '#3DF'},
+  {bg: '#AFC', fg: '#4E5'},
+  {bg: '#AAA', fg: '#333'},
+  {bg: '#111', fg: '#555'},
+]
 
 
-const rndItem = (arr: string[]) => arr[Math.round(Math.random() * (arr.length - 1))]
+const rndItem = () => colPairs[Math.round(Math.random() * (colPairs.length - 1))]
 
 const sketch = (p5: P5) => {
   p5.windowResized = () => {
@@ -19,8 +26,10 @@ const sketch = (p5: P5) => {
     p5.frameRate(60)
     p5.noStroke();
 
-    p5.fill(rndItem(fgCols))
-    p5.background(rndItem(bgCols));
+    const {bg, fg} = rndItem()
+
+    p5.background(bg);
+    p5.fill(fg)
 
     const size = 2 * p5.max(p5.width, p5.height) / COUNT
 
@@ -45,7 +54,8 @@ const sketch = (p5: P5) => {
         p5.pop()
       })
     })
-  }
+    }
+  document.addEventListener('click', p5.setup)
 }
 
 new P5(sketch)
