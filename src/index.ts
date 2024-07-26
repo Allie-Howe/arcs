@@ -9,12 +9,11 @@ const colPairs = [
   {bg: '#FAF', fg: '#F5D'},
   {bg: '#AFF', fg: '#3DF'},
   {bg: '#AFC', fg: '#4E5'},
-  {bg: '#AAA', fg: '#333'},
-  {bg: '#111', fg: '#555'},
+  {bg: '#EEE', fg: '#444'},
 ]
 
 
-const rndItem = () => colPairs[Math.round(Math.random() * (colPairs.length - 1))]
+const rndItem = () => colPairs[Math.floor(Math.random() * (colPairs.length))]
 
 const sketch = (p5: P5) => {
   p5.windowResized = () => {
@@ -55,6 +54,7 @@ const sketch = (p5: P5) => {
       })
     })
     }
+    // TODO: Consider tapping top half to change color & regen, bottom to only regen
   document.addEventListener('click', () => {
     p5.setup()
     document.querySelector('#info')?.remove()
